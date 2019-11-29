@@ -1,29 +1,29 @@
 import { combineReducers } from 'redux';
 import types from './type';
 
-const budget = (state = 0, { action }) => {
-  switch (action.type) {
+const budgetReducer = (state = 0,  { type, payload }) => {
+  switch (type) {
     case types.ADD_BUDGET:
-      return action.payload;
+      return payload;
     default:
       return state;
   }
 };
 
-const expenses = (state = [], { action }) => {
+const expenseReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.ADD_EXPENSE:
-      return [...state, action.payload ];
+      return [...state, payload ];
     case types.REMOVE_EXPENSE:
-      return state.filter(item => item.id !== action.payload);
+      return state.filter(item => item.id !== payload);
     default:
       return state;
   }
 };
 
 const BudgetAppReducer = combineReducers({
-  budget,
-  expenses,
+  budgetReducer,
+  expenseReducer,
 });
 
 export default BudgetAppReducer;
