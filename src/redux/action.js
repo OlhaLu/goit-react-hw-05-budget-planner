@@ -1,7 +1,7 @@
 import types from './type';
 const shortid = require('shortid');
 
-export const onAddBudget = value => {
+export const addBudget = value => {
     return {
     type: types.ADD_BUDGET,
     payload: {
@@ -10,7 +10,7 @@ export const onAddBudget = value => {
 }
 };
 
-export const onAddExpense = value => {
+export const addExpense = value => {
     return {
   type: types.ADD_EXPENSE,
   payload: {
@@ -20,7 +20,7 @@ export const onAddExpense = value => {
 }
 };
 
-export const onRemoveExpense = id => {
+export const removeExpense = id => {
     return {
     type: types.REMOVE_EXPENSE,
     payload: {

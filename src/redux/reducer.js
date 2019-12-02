@@ -21,9 +21,9 @@ const expenseReducer = (state = [], { type, payload }) => {
   }
 };
 
-const BudgetAppReducer = combineReducers({
+const rootReducers = combineReducers({
   budgetReducer,
   expenseReducer,
 });
 
-export default BudgetAppReducer;
+export default rootReducers;

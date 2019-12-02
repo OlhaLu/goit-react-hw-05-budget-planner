@@ -3,8 +3,10 @@ import BudgetForm from './BudgetForm';
 import * as actions from '../../redux/action';
 
 const mapDispatchToProps = dispatch => ({
-    onSave: input => dispatch(actions.onAddBudget(input)),
+    onSave: input => dispatch(actions.addBudget(input)),
 });
 
-export default connect(null, mapDispatchToProps,
+export default connect(
+    null, 
+    mapDispatchToProps,
 )(BudgetForm);
