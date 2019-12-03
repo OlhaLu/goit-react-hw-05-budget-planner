@@ -23,7 +23,7 @@ export default class BudgetForm extends Component {
     e.preventDefault();
 
     this.props.onSave(this.state.budget);
-    this.setState({ budget: 0 });
+    this.setState({ budget: '' });
   };
 
   render() {

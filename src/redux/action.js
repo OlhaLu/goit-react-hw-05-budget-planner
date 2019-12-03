@@ -1,5 +1,4 @@
 import types from './type';
-const shortid = require('shortid');
 
 export const addBudget = value => {
     return {
@@ -7,7 +6,7 @@ export const addBudget = value => {
     payload: {
       value: Number(value),
     },
-}
+  }
 };
 
 export const addExpense = value => {
@@ -15,7 +14,6 @@ export const addExpense = value => {
   type: types.ADD_EXPENSE,
   payload: {
     value: Number(value),
-    id: shortid.generate(),
   },
 }
 };
@@ -26,5 +24,5 @@ export const removeExpense = id => {
     payload: {
         id,
     },
-}
+  }
 };
