@@ -21,19 +21,22 @@ export default class BudgetForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
+    const { budget } = this.state;
 
-    this.props.onSave(this.state.budget);
+    this.props.onSave(budget);
     this.setState({ budget: '' });
   };
 
   render() {
+    const { budget } = this.state;
+
     return (
       <Form onSubmit={this.handleSubmit}>
         <Label customStyles={labelStyles}>
           Enter your total budget
           <Input
             type="number"
-            value={this.state.budget}
+            value={budget}
             onChange={this.handleChange}
           />
         </Label>
