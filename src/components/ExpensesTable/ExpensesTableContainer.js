@@ -11,7 +11,4 @@ const mapDispatchToProps = dispatch => ({
   onRemove: id => dispatch(actions.removeExpense(id)),
 });
 
-export default connect(
-  mapStateToProp,
-  mapDispatchToProps,
-  )(ExpensesTable);
+export default connect(mapStateToProp, mapDispatchToProps)(ExpensesTable);

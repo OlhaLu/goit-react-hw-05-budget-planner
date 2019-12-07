@@ -6,7 +6,4 @@ const mapDispatchToProps = dispatch => ({
   onSave: input => dispatch(actions.addExpense(input)),
 });
 
-export default connect(
-  null, 
-  mapDispatchToProps,
-)(ExpenseForm);
+export default connect(null, mapDispatchToProps)(ExpenseForm);

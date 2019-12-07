@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import Values from './Values';
-import  * as selects from '../../redux/select';
+import * as selects from '../../redux/select';
 
 const mapStateToProp = state => ({
   budget: selects.getBudget(state),

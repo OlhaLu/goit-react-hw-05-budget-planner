@@ -34,11 +34,7 @@ export default class BudgetForm extends Component {
       <Form onSubmit={this.handleSubmit}>
         <Label customStyles={labelStyles}>
           Enter your total budget
-          <Input
-            type="number"
-            value={budget}
-            onChange={this.handleChange}
-          />
+          <Input type="number" value={budget} onChange={this.handleChange} />
         </Label>
 
         <Button label="Save" type="submit" />

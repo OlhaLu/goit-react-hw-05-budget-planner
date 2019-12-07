@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux';
 import types from './type';
 
-const budgetReducer = (state = 0,  { type, payload }) => {
+const budgetReducer = (state = 0, { type, payload }) => {
   switch (type) {
     case types.ADD_BUDGET:
       return payload;
