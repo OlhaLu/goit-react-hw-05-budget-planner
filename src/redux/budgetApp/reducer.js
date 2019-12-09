@@ -1,7 +1,6 @@
-import { combineReducers } from 'redux';
 import types from './type';
 
-const budgetReducer = (state = 0, { type, payload }) => {
+export const budgetReducer = (state = 0, { type, payload }) => {
   switch (type) {
     case types.ADD_BUDGET:
       return payload;
@@ -10,7 +9,7 @@ const budgetReducer = (state = 0, { type, payload }) => {
   }
 };
 
-const expenseReducer = (state = [], { type, payload }) => {
+export const expenseReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.ADD_EXPENSE:
       return [payload, ...state];
@@ -20,10 +19,3 @@ const expenseReducer = (state = [], { type, payload }) => {
       return state;
   }
 };
-
-const rootReducers = combineReducers({
-  budgetReducer,
-  expenseReducer,
-});
-
-export default rootReducers;

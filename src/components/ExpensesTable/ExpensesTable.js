@@ -18,7 +18,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items = [], onRemove }) => (
+const ExpensesTable = ({ items, onRemove }) => (
   <Table>
     <thead>
       <tr>
@@ -28,7 +28,9 @@ const ExpensesTable = ({ items = [], onRemove }) => (
       </tr>
     </thead>
     <tbody>
-      {items.map(({ id, name, amount }) => (
+    {items &&
+      items.length > 0 &&
+        items.map(({ id, name, amount }) => (
         <tr key={id}>
           <td>{name}</td>
           <td>{amount}</td>

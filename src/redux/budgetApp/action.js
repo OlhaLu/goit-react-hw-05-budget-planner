@@ -13,7 +13,7 @@ export const addExpense = value => {
   return {
     type: types.ADD_EXPENSE,
     payload: {
-      value: Number(value),
+      value: value,
     },
   };
 };

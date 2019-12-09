@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import ExpensesTable from './ExpensesTable';
-import * as actions from '../../redux/action';
-import * as selects from '../../redux/select';
+import * as actions from '../../redux/budgetApp/action';
+import * as selects from '../../redux/budgetApp/select';
 
 const mapStateToProp = state => ({
   items: selects.getExpenses(state),
