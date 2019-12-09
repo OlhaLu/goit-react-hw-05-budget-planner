@@ -8,7 +8,7 @@ const Container = styled.section`
   align-items: center;
 `;
 
-const Values = ({ budget, expenses, balance }) => (
+const Values = ({ budget = 0, expenses = 0, balance = 0 }) => (
   <Container>
     <Value label="Budget" value={budget} isPositive />
     <Value label="Expenses" value={expenses} />

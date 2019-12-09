@@ -14,7 +14,7 @@ export const expenseReducer = (state = [], { type, payload }) => {
     case types.ADD_EXPENSE:
       return [payload, ...state];
     case types.REMOVE_EXPENSE:
-      return state.filter(item => item.id !== payload);
+      return state.filter(item => item.id !== payload.id);
     default:
       return state;
   }
