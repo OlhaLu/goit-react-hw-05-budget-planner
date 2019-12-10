@@ -12,7 +12,7 @@ export const budgetReducer = (state = 0, { type, payload }) => {
 export const expenseReducer = (state = [], { type, payload }) => {
   switch (type) {
     case types.ADD_EXPENSE:
-      return [payload.expense, ...state];
+      return [payload.amount, ...state];
     case types.REMOVE_EXPENSE:
       return state.filter(item => item.id !== payload.id);
     default:

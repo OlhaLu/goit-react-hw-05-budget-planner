@@ -3,7 +3,6 @@ import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
-const shortid = require('shortid');
 
 const labelStyles = `
   margin-bottom: 16px;  
@@ -23,12 +22,9 @@ export default class ExpenseForm extends Component {
 
   handleSubmit = e => {
     e.preventDefault();
-    const { name, amount } = this.state;
 
     this.props.onSave({
-      id: shortid.generate(),
-      name,
-      amount: Number(amount),
+      ...this.state,
     });
 
     this.setState({ name: '', amount: 0 });

@@ -28,8 +28,7 @@ const ExpensesTable = ({ items = [], onRemove }) => (
       </tr>
     </thead>
     <tbody>
-    {items &&
-      items.length > 0 &&
+    {items.length > 0 &&
         items.map(({ id, name, amount }) => (
         <tr key={id}>
           <td>{name}</td>
