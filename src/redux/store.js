@@ -3,7 +3,8 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 import rootReducers from './rootReducer';
 import logger from './middleware/logger';
 
-const composeEnhancers = composeWithDevTools(applyMiddleware(logger));
+const middleware = [logger];
+const composeEnhancers = composeWithDevTools(applyMiddleware(...middleware));
 
 const store = createStore(
   rootReducers,
