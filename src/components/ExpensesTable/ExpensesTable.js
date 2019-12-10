@@ -18,7 +18,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items, onRemove }) => (
+const ExpensesTable = ({ items = [], onRemove }) => (
   <Table>
     <thead>
       <tr>

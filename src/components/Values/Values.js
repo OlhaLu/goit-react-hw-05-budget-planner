@@ -16,6 +16,5 @@ const Values = ({ budget = 0, expenses = 0, balance = 0 }) => (
   </Container>
 );
 
-
 export default Values;
 
