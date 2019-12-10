@@ -2,8 +2,8 @@ import { combineReducers } from 'redux';
 import { budgetReducer, expenseReducer } from './budgetApp/reducer';
 
 const rootReducers = combineReducers({
-    budgetReducer,
-    expenseReducer,
+  budget: budgetReducer,
+  expenses: expenseReducer,
   });
   
   export default rootReducers;
