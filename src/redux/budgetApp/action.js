@@ -14,7 +14,7 @@ export const addExpense = ({ name, amount }) => ({
     type: types.ADD_EXPENSE,
     payload: {
         id: shortid.generate(),
-        name,
+        name: name,
         amount: Number(amount),
   },
 });

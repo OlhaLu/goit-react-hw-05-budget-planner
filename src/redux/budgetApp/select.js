@@ -7,4 +7,4 @@ export const calculateTotalExpenses = state => {
 };
 
 export const calculateBalance = state =>
-  getBudget(state) - calculateTotalExpenses(state);
+  getBudget(state) - getExpenses(state);
