@@ -18,7 +18,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items = [], onRemove }) => (
+const ExpensesTable = ({ items, onRemove }) => (
   <Table>
     <thead>
       <tr>
@@ -34,7 +34,9 @@ const ExpensesTable = ({ items = [], onRemove }) => (
           <td>{name}</td>
           <td>{amount}</td>
           <td>
-            <Button label="Delete" onClick={() => onRemove(id)} />
+            <Button 
+            label="Delete"
+            onClick={() => onRemove(id)} />
           </td>
         </tr>
       ))}

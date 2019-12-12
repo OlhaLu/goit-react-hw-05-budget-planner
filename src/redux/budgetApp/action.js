@@ -23,7 +23,7 @@ export const removeExpense = id => {
   return {
     type: types.REMOVE_EXPENSE,
     payload: {
-      id,
+      id: id,
     },
   };
 };
