@@ -4,7 +4,7 @@ export const getBudget = state => state.budget;
 export const getExpenses = state => state.expenses;
 
 export const calculateTotalExpenses = createSelector(getExpenses, expenses =>
-  expenses.reduce((total, expense) => total + expense.amount, 0),
+ expenses.reduce((total, expense) => total + Number(expense.amount), 0),
 );
 
 export const calculateBalance = state =>
