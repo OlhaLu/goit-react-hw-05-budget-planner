@@ -3,6 +3,7 @@ import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
+import T from 'prop-types';
 const shortid = require('shortid');
 
 const labelStyles = `
@@ -13,6 +14,10 @@ export default class ExpenseForm extends Component {
   state = {
     name: '',
     amount: 0,
+  };
+
+  static propTypes = {
+    onSave: T.func.isRequired,
   };
 
   handleChange = e => {

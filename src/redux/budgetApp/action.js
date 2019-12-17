@@ -11,10 +11,8 @@ export const addBudget = value => {
 
 export const addExpense = value => ({
     type: types.ADD_EXPENSE,
-    payload: {
-        name: value.name, 
-        amount: value.amount, 
-        id: value.id
+    payload: { 
+      value: value,
   },
 });
 

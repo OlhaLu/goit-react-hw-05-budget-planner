@@ -3,6 +3,7 @@ import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
+import T from 'prop-types';
 
 const labelStyles = `
   margin-bottom: 16px;  
@@ -11,6 +12,10 @@ const labelStyles = `
 export default class BudgetForm extends Component {
   state = {
     budget: 0,
+  };
+
+  static propTypes = {
+    onSave: T.func.isRequired,
   };
 
   handleChange = e => {
