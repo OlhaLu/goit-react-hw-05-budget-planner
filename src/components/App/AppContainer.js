@@ -3,7 +3,7 @@ import App from './App';
 import * as selects from '../../redux/budgetApp/select';
 
 const mapStateToProps = state => ({
-expenses: selects.getExpenses(state),
+  expenses: selects.getExpenses(state),
 });
 
 export default connect(mapStateToProps)(App);

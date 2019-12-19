@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
+import T from 'prop-types';
+import shortid from 'shortid';
 import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
-import T from 'prop-types';
-const shortid = require('shortid');
 
 const labelStyles = `
   margin-bottom: 16px;  
@@ -31,9 +31,9 @@ export default class ExpenseForm extends Component {
     const { name, amount } = this.state;
 
     this.props.onSave({
-        id: shortid.generate(),
-        name: name,
-        amount: Number(amount),
+      id: shortid.generate(),
+      name,
+      amount: Number(amount),
     });
 
     this.setState({ name: '', amount: 0 });

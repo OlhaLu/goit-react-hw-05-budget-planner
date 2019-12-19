@@ -1,7 +1,8 @@
 import React from 'react';
+import T from 'prop-types';
 import styled from 'styled-components';
 import Value from './Value';
-import T from 'prop-types';
+import * as selects from '../../redux/budgetApp/select';
 
 const Container = styled.section`
   display: inline-flex;
@@ -12,16 +13,15 @@ const Container = styled.section`
 const Values = ({ budget = 0, expenses = 0, balance = 0 }) => (
   <Container>
     <Value label="Budget" value={budget} isPositive />
-    <Value label="Expenses" value={expenses} />
+    <Value label="Expenses" value={selects.calculateTotalExpenses(expenses)} />
     <Value label="Balance" value={balance} isPositive={balance >= 0} />
   </Container>
 );
 
 Values.propTypes = {
   budget: T.number.isRequired,
-  expenses: T.number.isRequired,
+  expenses: T.arrayOf(T.object).isRequired,
   balance: T.number.isRequired,
 };
 
 export default Values;
-

@@ -1,7 +1,7 @@
 import React from 'react';
+import T from 'prop-types';
 import styled from 'styled-components';
 import Button from '../shared/Button';
-import T from 'prop-types';
 
 const Table = styled.table`
   border-collapse: collapse;
@@ -19,7 +19,7 @@ const Table = styled.table`
   }
 `;
 
-const ExpensesTable = ({ items = [], onRemove }) => (
+const ExpensesTable = ({ items, onRemove }) => (
   <Table>
     <thead>
       <tr>
@@ -29,19 +29,17 @@ const ExpensesTable = ({ items = [], onRemove }) => (
       </tr>
     </thead>
     <tbody>
-    {items &&
-    items.length > 0 &&
+      {items &&
+        items.length > 0 &&
         items.map(({ id, name, amount }) => (
-        <tr key={id}>
-          <td>{name}</td>
-          <td>{amount}</td>
-          <td>
-            <Button 
-            label="Delete"
-            onClick={() => onRemove(id)} />
-          </td>
-        </tr>
-      ))}
+          <tr key={id}>
+            <td>{name}</td>
+            <td>{amount}</td>
+            <td>
+              <Button label="Delete" onClick={() => onRemove(id)} />
+            </td>
+          </tr>
+        ))}
     </tbody>
   </Table>
 );

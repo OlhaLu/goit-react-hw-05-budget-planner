@@ -30,6 +30,10 @@ const Value = ({ label, value, isPositive }) => (
   </Container>
 );
 
+Value.defaultProps = {
+  isPositive: false,
+};
+
 Value.propTypes = {
   label: T.string.isRequired,
   value: T.number.isRequired,

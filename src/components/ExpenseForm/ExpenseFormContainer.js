@@ -3,7 +3,7 @@ import ExpenseForm from './ExpenseForm';
 import * as actions from '../../redux/budgetApp/action';
 
 const mapDispatchToProps = dispatch => ({
-  onSave: input => dispatch(actions.addExpense(input)),
+  onSave: expense => dispatch(actions.addExpense(expense)),
 });
 
 export default connect(null, mapDispatchToProps)(ExpenseForm);

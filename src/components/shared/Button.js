@@ -44,5 +44,4 @@ Button.propTypes = {
   onClick: T.func,
 };
 
-
 export default Button;

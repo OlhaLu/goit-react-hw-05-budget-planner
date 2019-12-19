@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
+import T from 'prop-types';
 import Form from '../shared/Form';
 import Label from '../shared/Label';
 import Input from '../shared/Input';
 import Button from '../shared/Button';
-import T from 'prop-types';
 
 const labelStyles = `
   margin-bottom: 16px;  
@@ -29,7 +29,7 @@ export default class BudgetForm extends Component {
     const { budget } = this.state;
 
     this.props.onSave(budget);
-    this.setState({ budget: '' });
+    this.setState({ budget: 0 });
   };
 
   render() {

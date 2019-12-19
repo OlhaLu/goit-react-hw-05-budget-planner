@@ -6,9 +6,6 @@ import logger from './middleware/logger';
 const middleware = [logger];
 const composeEnhancers = composeWithDevTools(applyMiddleware(...middleware));
 
-const store = createStore(
-  rootReducers,
-  composeEnhancers,
-);
+const store = createStore(rootReducers, composeEnhancers);
 
 export default store;

@@ -6,21 +6,23 @@ export const addBudget = value => {
     payload: {
       value: Number(value),
     },
-  }
+  };
 };
 
-export const addExpense = value => ({
+export const addExpense = expenses => {
+  return {
     type: types.ADD_EXPENSE,
-    payload: { 
-      value: value,
-  },
-});
+    payload: {
+      value: expenses,
+    },
+  };
+};
 
 export const removeExpense = id => {
   return {
     type: types.REMOVE_EXPENSE,
     payload: {
-      id: id,
+      id,
     },
   };
 };
