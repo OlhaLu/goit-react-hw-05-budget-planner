@@ -13,7 +13,7 @@ const Container = styled.section`
 const Values = ({ budget = 0, expenses = 0, balance = 0 }) => (
   <Container>
     <Value label="Budget" value={budget} isPositive />
-    <Value label="Expenses" value={selects.calculateTotalExpenses(expenses)} />
+    <Value label="Expenses" value={selects.getTotalExpensesValue(expenses)} />
     <Value label="Balance" value={balance} isPositive={balance >= 0} />
   </Container>
 );
